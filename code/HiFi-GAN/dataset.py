@@ -285,41 +285,15 @@ class CodeDataset(torch.utils.data.Dataset):
             feats = {"code": code.squeeze()}
 
         if self.f0:
-            # ii = pitch != 0
-            # mean = np.mean(pitch[ii])
-            # std = np.std(pitch[ii])
-            # if std == 0:
-            #     std = 1
-            # pitch[ii] = (pitch[ii] - mean) / std
             f0 = torch.tensor(pitch).unsqueeze(0).unsqueeze(0)
-            #f0 = f0.astype(np.float32)
             feats['f0'] = f0.squeeze(0)
         if self.multispkr:
-            #feats['spkr'] = self._get_spkr(index)
-            feats['spkr'] = np.load("/home/soumyad/emoconv/speaker_embeddings_adv/" + emo_file_name)
+            feats['spkr'] = np.load("/ZEST/code/EASE/EASE_embeddings/" + emo_file_name)
 
         if self.spkr_average:
             with open('speakers.pkl', 'rb') as handle:
                 speakers_feat = pickle.load(handle)
             feats['spkr'] = speakers_feat[emo_file_name[:4]]
-        
-        if self.f0_normalize:
-            # spkr_id = self._get_spkr(index).item()
-
-            # if spkr_id not in self.f0_stats:
-            #     mean = self.f0_stats['f0_mean']
-            #     std = self.f0_stats['f0_std']
-            # else:
-            #     mean = self.f0_stats[spkr_id]['f0_mean']
-            #     std = self.f0_stats[spkr_id]['f0_std']
-            # ii = feats['f0'] != 0
-
-            # if self.f0_median:
-            #     med = np.median(feats['f0'][ii])
-            #     feats['f0'][~ii] = med
-            #     feats['f0'][~ii] = (feats['f0'][~ii] - mean) / std
-
-            # feats['f0'][ii] = (feats['f0'][ii] - mean) / std
 
             if self.f0_feats:
                 feats['f0_stats'] = torch.FloatTensor([mean, std]).view(-1).numpy()

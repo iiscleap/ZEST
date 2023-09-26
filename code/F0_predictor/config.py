@@ -3,11 +3,11 @@ val_datasets = {"ESD":"/home/soumyad/emoconv/ESD/val"}
 test_datasets = {"ESD":"/home/soumyad/emoconv/ESD/test"}
 
 
-train_tokens_orig = {"ESD":"/home/soumyad/unit2wav/parsed_hubert/train_esd.txt"}
-val_tokens_orig = {"ESD":"/home/soumyad/unit2wav/parsed_hubert/val_esd.txt"}
-test_tokens_orig = {"ESD":"/home/soumyad/unit2wav/parsed_hubert/test_esd.txt"}
+train_tokens_orig = {"ESD":"/ZEST/code/train_esd.txt"}
+val_tokens_orig = {"ESD":"/ZEST/code/val_esd.txt"}
+test_tokens_orig = {"ESD":"/ZEST/code/test_esd.txt"}
 
-f0_file = "/home/soumyad/emoconv/pickle_files/f0.pickle"
+f0_file = "ZEST/code/f0.pickle"
 hparams = {
         ################################
         # Experiment Parameters        #
@@ -56,8 +56,7 @@ hparams = {
         "batch_size":32,
         "warmup":7,
         "decay_rate": 0.5,
-        "decay_every":7,
-        "spectrogram_folder":"/home/soumyad/emoconv_fastspeech/spectrograms"}
+        "decay_every":7}
 
 hifi_gan_params={"resblock_dilation_sizes":((1,3,5),(1,3,5),(1,3,5)),
                  "resblock_kernel_sizes":(3, 7, 11),
@@ -94,9 +93,3 @@ optimizerparams = {
   "synth_step": 1000,
   "val_step": 1000,
   "save_step": 10000}
-
-logparams={
-    "ckpt_path": "/home/soumyad/emoconv_fastspeech/ckpt",
-    "log_path": "/home/soumyad/emoconv_fastspeech/logs",
-    "result_path": "/home/soumyad/emoconv_fastspeech/results"
-}

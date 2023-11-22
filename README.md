@@ -28,4 +28,4 @@ We show three examples of how the F0 conversion works in ZEST. We show three exa
 
 DSDT|  USS| UTE 
 :-------------------------:|:-------------------------:|:--------------------------:|
-<img src="./images/F0_conversions_DSDT.png" width="600px"></img>|  <img src="./images/F0_conversions_USS.png" width="600px"></img>|  <img src="./images/F)_conversions_UTE.png" width="600px"></img>
+<img src="./images/F0_conversions_DSDT.png" width="600px"></img>|  <img src="./images/F0_conversions_USS.png" width="600px"></img>|  <img src="./images/F0_conversions_UTE.png" width="600px"></img>

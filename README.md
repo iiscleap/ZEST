@@ -24,7 +24,7 @@ Angry|  Happy | Sad | Surprise
 
 ## Examples of F0 conversion
 
-We show three examples of how the F0 conversion works in ZEST. We show three examples from three test settings - DSDT (source and reference speaker seen but different with unseen text), USS (Unseen source speaker with seen reference speaker/emotion and unseen text) and UTE (seen source speaker with unseen reference speaker/emotion and unseen text).
+We show three examples of how the F0 conversion works in ZEST. We show three examples from three test settings - DSDT (source and reference speaker seen but different with unseen text), USS (Unseen source speaker with seen reference speaker/emotion and unseen text) and UTE (seen source speaker with unseen reference speaker/emotion and unseen text). The first row indicates the F0 contour of the **source** speech signal, the second row indicates pitch contour of the **reference** speech signal while the last row indicates the **converted** F0 contour.
 
 DSDT|  USS| UTE 
 :-------------------------:|:-------------------------:|:--------------------------:|

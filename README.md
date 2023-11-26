@@ -2,6 +2,13 @@
 Zero-Shot Emotion Style Transfer
 
 Samples and code for the paper **Zero Shot Audio to Audio Emotion Transfer With Speaker Disentanglement** submitted to **ICASSP 2024**
+
+## Ablations
+
+We perform two ablations where we remove the two CNN-BiLSTM networks operating on the F0 contour and the HuBERT tokens. The results for these cases are provided in the diagram below. Note that there are two more entries (ZEST-no-F0-enc and ZEST-no-unit-enc) in the table than what was provided in the paper.
+
+<img src="./images/ablations.png" width="1200px"></img>
+
 ## EASE Embeddings
 We first show the utility of the adversarial learning in the speaker embedding module. <img src="./images/EASE.png" width="1200px"></img>
 

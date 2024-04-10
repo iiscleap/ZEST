@@ -153,7 +153,7 @@ class PitchModel(nn.Module):
         self.leaky = nn.LeakyReLU()
         self.cnn_reg1 = nn.Conv1d(128, 128, kernel_size=(3,), padding=1)
         self.cnn_reg2 = nn.Conv1d(128, 1, kernel_size=(1,), padding=0)
-        self.speaker_linear = nn.Linear(192, 128)
+        self.speaker_linear = nn.Linear(128, 128)
         # self.pe_spk = PositionalEncoding(192)
 
     def forward(self, aud, tokens, speaker, lengths, alpha=1.0):
